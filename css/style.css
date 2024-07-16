@@ -1,0 +1,43 @@
+:root {
+    --blue-color: rgb(33, 150, 243);
+    --green-color: rgb(81, 212, 81);
+    --pink-color: rgb(216, 85, 107);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.box {
+    width: 250px;
+    height: 250px;
+
+    flex-shrink: 0;
+    margin: 20px;
+}
+.box.relative {
+    position: relative;
+    top: 120px;
+    right: 120px;
+    z-index: 3;
+}
+.relative-second {
+    position: relative;
+    right: 250px;
+    top: 300px;
+    z-index: 2;
+}
+.relative-first {
+    z-index: 1;
+}
+.box:nth-child(1) {
+    background-color: var(--pink-color);
+}
+
+.box:nth-child(2) {
+    background-color: var(--blue-color);
+}
+
+.box:nth-child(3) {
+    background-color: var(--green-color);
+}
